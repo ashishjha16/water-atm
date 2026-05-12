@@ -202,7 +202,5 @@ app.use((req, res) => {
   res.status(404).json({ error: "Not found." });
 });
 
-app.listen(PORT, () => {
-  console.log(`Smart Water ATM backend running on http://localhost:${PORT}`);
-});
+module.exports = app;
 

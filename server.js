@@ -27,7 +27,7 @@ app.use(express.json({ limit: "1mb" }));
 app.use(express.static(path.join(__dirname, "public")));
 
 // Validate required env vars on startup (fail fast)
-const REQUIRED_VARS = ["KEY_ID", "KEY_SECRET", "ESP_IP", "PORT"];
+const REQUIRED_VARS = ["KEY_ID", "KEY_SECRET", "ESP_IP"];
 for (const v of REQUIRED_VARS) {
   if (!process.env[v]) {
     console.error(`Missing required environment variable: ${v}`);
